@@ -1,0 +1,44 @@
+﻿@model DesafioPokemon.Models.HomeModel
+
+@{
+    ViewBag.Title = "Desafio Pokemon - Online Applications";
+}
+<br />
+<div class="row">
+
+    @using (Html.BeginForm("Filtrar", "Home", FormMethod.Post))
+    {
+        <div class="col-md-6">
+            <input type="text" value="@Model.Cidade" id="cidade" name="cidade" placeholder="Informe uma cidade" class="form-control text-uppercase" />
+        </div>
+        <div class="col-md-2">
+            <input type="submit" id="pesquisar" name="pesquisar" value="Pesquisar" class="form-control btn btn-primary" />
+        </div>
+    }
+
+</div>
+<hr />
+@if (Model.Nome != "" && Model.Nome != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Pokemon encontrado com sucesso!!!</h3>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <label>Temperatura: </label> @Model.Temperatura.ToString("N2") ºC
+        </div>
+        <div class="col-md-4">
+            <label>Chovendo: </label> @Model.Chovendo
+        </div>
+        <div class="col-md-4">
+            <label>Nome: </label> @Model.Nome
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning" role="alert">Nenhum pokemon encontrado. Por favor, informe uma cidade válida.</div>
+}
