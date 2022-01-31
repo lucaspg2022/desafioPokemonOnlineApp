@@ -6,7 +6,7 @@ Teste Desafio Pokemon - Online Applications
 
 Passo a passo da aplicação:
 
-1 ->  Requisitos para a execução da aplicação: Primeiramente é preciso ter em sua maquina o Visual Studio, se possivel na verão do projeto.
+1 ->  Requisitos para a execução da aplicação: Primeiramente é preciso ter em sua maquina o Visual Studio, se possivel na versão do projeto.
 
 2 -> Abrindo solução: Após instalar o Visual Studio , abra a solution.
 
